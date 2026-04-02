@@ -86,10 +86,10 @@ export default function AboutUs() {
                 AnonX was founded to bridge the gap between visionary ideas and flawless technical execution. We realized that traditional agencies were too slow, too rigid, and often siloed expertise.
               </p>
               <p>
-                We built a different kind of firm. An anonymous, highly capable 'X-factor' that completely integrates with client goals. We don't just write code; we engineer comprehensive digital ecosystems. From deploying sub-millisecond cloud backends to executing aggressive, data-driven technical SEO campaigns that dominate search rankings.
+                We built a different kind of firm. An anonymous, highly capable 'X-factor' that completely integrates with client goals. We don&apos;t just write code; we engineer comprehensive digital ecosystems — from deploying sub-millisecond <Link href="/services" className="text-brand-orange font-bold hover:underline">cloud backends</Link> to executing aggressive <Link href="/services" className="text-brand-orange font-bold hover:underline">technical SEO campaigns</Link> that dominate search rankings.
               </p>
               <p>
-                When you partner with AnonX, you aren't hiring a vendor. You are acquiring an entire technical department dedicated exclusively to your scale.
+                When you partner with AnonX, you aren&apos;t hiring a vendor. You are acquiring an entire technical department dedicated exclusively to your scale.
               </p>
             </div>
           </div>
@@ -263,9 +263,14 @@ export default function AboutUs() {
       <section className="py-32 max-w-4xl mx-auto px-6 text-center">
         <h2 className="font-cabinet font-extrabold text-4xl md:text-5xl text-navy-950 mb-6 tracking-tight">Ready to architect your scale?</h2>
         <p className="text-navy-600 mb-10 text-lg md:text-xl font-medium">Stop worrying about technical debt and algorithm updates. Let our squad build a resilient foundation for your business.</p>
-        <Link href="/contact-us" className="inline-flex h-16 px-12 rounded-full bg-brand-orange hover:bg-orange-600 text-white font-bold text-lg items-center transition-all shadow-[0_10px_30px_rgba(249,115,22,0.3)] transform hover:-translate-y-1">
-          Initiate Contact Protocol
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link href="/contact-us" className="inline-flex h-16 px-12 rounded-full bg-brand-orange hover:bg-orange-600 text-white font-bold text-lg items-center transition-all shadow-[0_10px_30px_rgba(249,115,22,0.3)] transform hover:-translate-y-1">
+            Start Your Project
+          </Link>
+          <Link href="/services" className="inline-flex h-16 px-12 rounded-full bg-navy-50 hover:bg-navy-100 text-navy-900 font-bold text-lg items-center transition-colors">
+            View All Services
+          </Link>
+        </div>
       </section>
     </div>
   );

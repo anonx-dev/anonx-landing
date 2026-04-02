@@ -178,6 +178,8 @@ export default function RootLayout({
         {/* Canonical & Alternate URLs */}
         <link rel="canonical" href={BASE_URL} />
         <link rel="alternate" href={BASE_URL} hrefLang="en" />
+        {/* Explicit robots tag — belt-and-suspenders enforcement */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         {/* JSON-LD: Organization */}
         <Script

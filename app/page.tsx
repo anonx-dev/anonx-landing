@@ -168,6 +168,9 @@ export default function LandingPage() {
           <p className="text-navy-600 max-w-2xl mx-auto text-lg">
             Comprehensive technology solutions designed to build, scale, and secure your enterprise.
           </p>
+          <Link href="/services" className="inline-flex items-center gap-1.5 text-brand-orange font-bold text-sm mt-4 hover:underline underline-offset-2">
+            See full capabilities →
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 px-0">
@@ -559,11 +562,11 @@ export default function LandingPage() {
             <div>
               <h4 className="text-white font-extrabold mb-6 tracking-widest uppercase text-xs">Services</h4>
               <ul className="space-y-3">
-                <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Mobile App Dev</Link></li>
-                <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Web Development</Link></li>
-                <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Cloud & DevOps</Link></li>
+                <li><Link href="/web-development" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Web Development</Link></li>
+                <li><Link href="/app-development" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">App Development</Link></li>
+                <li><Link href="/chatbot-development" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">AI Chatbots</Link></li>
+                <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Cloud &amp; DevOps</Link></li>
                 <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Cybersecurity VAPT</Link></li>
-                <li><Link href="/services" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">AI & Chatbots</Link></li>
               </ul>
             </div>
 
@@ -572,8 +575,15 @@ export default function LandingPage() {
               <ul className="space-y-3">
                 <li><Link href="/about-us" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">About Us</Link></li>
                 <li><Link href="/contact-us" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Contact Us</Link></li>
-                <li><Link href="/#" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Careers</Link></li>
                 <li><Link href="/#work" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Case Studies</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-extrabold mb-6 tracking-widest uppercase text-xs">Blog</h4>
+              <ul className="space-y-3">
+                <li><Link href="/blog/cost-to-build-a-website-2026" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Website Development Cost</Link></li>
+                <li><Link href="/blog/cost-to-build-a-mobile-app-2026" className="text-navy-400 hover:text-brand-orange transition-colors duration-300 text-sm font-semibold">Mobile App Development Cost</Link></li>
               </ul>
             </div>
 
