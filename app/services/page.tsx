@@ -1,6 +1,61 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import AnonxLogo from "@/components/ui/AnonxLogo";
+import Script from "next/script";
 import { ArrowLeft, Monitor, Smartphone, Cloud, Shield, Search, CheckCircle2, Zap, ArrowRight, Layers, Users, Briefcase, Bot } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore AnonX's full capabilities: Web & Platform Engineering, Flutter/React Native Mobile Apps, Cloud & DevOps (AWS, GCP, Azure), Cybersecurity VAPT, SEO Growth Engineering, and AI Chatbot Automation.",
+  keywords: [
+    "web development services",
+    "mobile app development agency",
+    "Flutter agency",
+    "React Native development",
+    "cloud DevOps services",
+    "AWS DevOps agency",
+    "cybersecurity VAPT services",
+    "penetration testing agency",
+    "SEO growth engineering",
+    "AI chatbot development",
+    "dedicated development squad",
+    "AnonX services",
+  ],
+  alternates: {
+    canonical: "https://www.anonx.space/services",
+  },
+  openGraph: {
+    title: "AnonX Services | Web, Mobile, Cloud & Cybersecurity",
+    description:
+      "End-to-end technical execution. Web apps, mobile (Flutter/RN), cloud infrastructure, VAPT, SEO, and AI chatbots. Any stack, any scale.",
+    url: "https://www.anonx.space/services",
+  },
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Software Engineering & Technology Consulting",
+  provider: {
+    "@type": "Organization",
+    name: "AnonX Technologies",
+    url: "https://www.anonx.space",
+  },
+  areaServed: "Worldwide",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "AnonX Technology Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web & Platform Engineering" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development (Flutter, React Native)" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud Infrastructure & DevOps" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cybersecurity & VAPT" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI & Chatbot Automation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO & Growth Engineering" } },
+    ],
+  },
+};
 
 export default function ServicesPage() {
   const services = [
@@ -56,6 +111,7 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-brand-bg font-satoshi selection:bg-brand-orange selection:text-white pb-20 overflow-hidden">
+      <Script id="schema-services" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
       {/* Header */}
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-navy-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -177,3 +233,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+

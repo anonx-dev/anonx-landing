@@ -1,6 +1,30 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import AnonxLogo from "@/components/ui/AnonxLogo";
 import { ArrowLeft, Target, Shield, Zap, Globe, Code2, LineChart, Cpu, Search, Layers, Server, Monitor, Smartphone, Cloud } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "AnonX Technologies is an elite software engineering agency — a decentralized collective of architects, cloud engineers, and growth specialists dedicated to scaling modern tech businesses.",
+  keywords: [
+    "about AnonX",
+    "AnonX Technologies",
+    "software engineering agency",
+    "tech company",
+    "who is AnonX",
+    "AnonX team",
+    "elite dev agency",
+  ],
+  alternates: { canonical: "https://www.anonx.space/about-us" },
+  openGraph: {
+    title: "About AnonX | Elite Software Engineering Agency",
+    description:
+      "Engineering the future, scaling the impossible. Meet the decentralized squad behind AnonX Technologies.",
+    url: "https://www.anonx.space/about-us",
+  },
+};
+
 
 export default function AboutUs() {
   return (
@@ -246,3 +270,4 @@ export default function AboutUs() {
     </div>
   );
 }
+

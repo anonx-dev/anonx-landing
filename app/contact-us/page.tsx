@@ -1,12 +1,55 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import AnonxLogo from "@/components/ui/AnonxLogo";
+import Script from "next/script";
 import { ArrowLeft, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with AnonX Technologies. Discuss your web, mobile, cloud, security, or AI project with our technical architects. We respond within 2 hours.",
+  keywords: [
+    "contact AnonX",
+    "hire software agency",
+    "get a quote",
+    "tech agency contact",
+    "AnonX contact",
+    "hire Flutter developer",
+    "cloud DevOps quote",
+  ],
+  alternates: { canonical: "https://www.anonx.space/contact-us" },
+  openGraph: {
+    title: "Contact AnonX | Start Your Project",
+    description:
+      "Ready to build something exceptional? Contact our engineering team at AnonX Technologies.",
+    url: "https://www.anonx.space/contact-us",
+  },
+};
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact AnonX Technologies",
+  url: "https://www.anonx.space/contact-us",
+  description: "Contact AnonX Technologies for software development, cloud, and cybersecurity projects.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "AnonX Technologies",
+    email: "connect@anonx.space",
+    url: "https://www.anonx.space",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "connect@anonx.space",
+      contactType: "customer support",
+      availableLanguage: "English",
+    },
+  },
+};
 
 export default function ContactUs() {
   return (
     <div className="min-h-screen bg-brand-bg font-satoshi selection:bg-brand-orange selection:text-white pb-20 overflow-hidden">
+      <Script id="schema-contact" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
       {/* Header */}
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -130,3 +173,4 @@ export default function ContactUs() {
     </div>
   );
 }
+

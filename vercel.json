@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "http://anonx.space/:path*",
+      "destination": "https://www.anonx.space/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://anonx.space/:path*",
+      "destination": "https://www.anonx.space/:path*",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true
+}

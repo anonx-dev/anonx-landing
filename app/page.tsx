@@ -1,11 +1,46 @@
+import type { Metadata } from "next";
 import { ArrowRight, Smartphone, Cloud, ShieldCheck, Users, Monitor, Shield, Server, Briefcase, Zap, CheckCircle2, Globe, Activity, Code2, ArrowUpRight, Star, Quote, Bot, Search, Menu } from "lucide-react";
 import Link from "next/link";
+import Script from "next/script";
 import AnonxLogo from "@/components/ui/AnonxLogo";
 import Mock from "@/components/ui/Mock";
+
+export const metadata: Metadata = {
+  title: "Custom Software, Cloud & Cybersecurity Services | AnonX",
+  description:
+    "AnonX provides custom software development, cloud and DevOps solutions, cybersecurity services, and AI automation to help businesses build, scale, and secure their digital systems.",
+  alternates: { canonical: "https://www.anonx.space" },
+  openGraph: {
+    url: "https://www.anonx.space",
+  },
+};
+
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "AnonX Technologies",
+  url: "https://www.anonx.space",
+  logo: "https://www.anonx.space/favicon.svg",
+  description: "Elite software engineering agency — web apps, mobile, cloud, VAPT, SEO, and AI chatbots.",
+  email: "connect@anonx.space",
+  areaServed: "Worldwide",
+  priceRange: "$$",
+  knowsAbout: [
+    "Web Development", "Mobile App Development", "Flutter", "React Native",
+    "Cloud DevOps", "AWS", "Kubernetes", "Cybersecurity", "VAPT",
+    "SEO Growth Engineering", "AI Chatbot Automation", "LangChain", "RAG"
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/anonxtech",
+    "https://www.anonx.space",
+  ],
+};
+
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-brand-bg font-satoshi selection:bg-brand-orange selection:text-white pb-0 overflow-hidden">
+      <Script id="schema-homepage" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }} />
       {/* ── Navbar ── */}
       <nav className="fixed top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-xl border-b border-gray-100 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -103,6 +138,8 @@ export default function LandingPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+          {/* Hidden SEO H1 — tells Google exactly what AnonX is */}
+          <h1 className="sr-only">Custom Software Development, Cloud, Cybersecurity &amp; AI Solutions | AnonX Technologies</h1>
           <h1 className="font-cabinet text-[38px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.15] md:leading-[1.1] font-extrabold text-navy-950 tracking-tight mb-5 md:mb-6 max-w-4xl px-2">
             Modern <span className="text-brand-orange">Cloud, Web &amp; Security</span> Solutions.
           </h1>
@@ -564,3 +601,4 @@ export default function LandingPage() {
     </div>
   );
 }
+
